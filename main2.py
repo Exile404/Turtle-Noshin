@@ -12,6 +12,45 @@ def drawoval1(rad):
         tur.circle(rad, 90)
         tur.circle(rad // 2, 90)
 def drawoval2(rad):
+    for x in range(2):
+        tur.circle(rad, 90)
+        tur.circle(rad // 2, 90)
+
+
+def draw_rectangle(board, x, y, width, height, size, color):
+    board.pencolor(color)
+    board.pensize(size)
+    board.setheading(0)
+
+    board.up()
+    board.goto(x, y)
+    board.down()
+    # draw top
+    board.forward(width)
+    # draw right
+    board.right(90)
+    board.forward(height)
+    # draw bottom
+    board.right(90)
+    board.forward(width)
+    # draw left
+    board.right(90)
+    board.forward(height)
+    board.end_fill()
+def draw_rectangle1(board, x, y, width, height, size, color):
+    board.pencolor(color)
+    board.pensize(size)
+    board.setheading(0)
+
+    board.up()
+    board.goto(x, y)
+    board.down()
+
+    # draw top
+    board.forward(-width)
+    # draw right
+
+    board.end_fill()
 def drawoval4(rad):
     for x in range(2):
         # tur.circle(rad, -90)
